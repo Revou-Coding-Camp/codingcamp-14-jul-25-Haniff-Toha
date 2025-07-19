@@ -1,11 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Haniff - Professional Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <!-- Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Logo">
+                <span>Portfolio</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#" onclick="showSection('profile')"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#" onclick="showSection('achievement')"><i class="fas fa-trophy"></i> Achievements</a></li>
+                    <li><a href="#" onclick="showSection('message')"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- HOME -->
+            <section id="home">
+                <h1 id="welcome-text">Hi <span id="user-name">Visitor</span>, Welcome!</h1>
+                <p>Professional Portfolio & Technology Solutions</p>
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=400&fit=crop" alt="Technology Banner" class="hero-image">
+            </section>
+
+            <!-- PROFILE -->
+            <section id="profile" class="section-hidden">
+                <div class="profile-content">
+                    <div class="profile-text">
+                        <h2>About Our Company</h2>
+                        <p>We are an innovative educational technology company focused on transforming the learning experience through cutting-edge solutions and industry-aligned curricula.</p>
+
+                        <h3>Vision</h3>
+                        <p>To become Southeast Asia's premier learning platform, empowering individuals and organizations to achieve their full potential.</p>
+
+                        <h3>Mission</h3>
+                        <ul>
+                            <li>Provide accessible, high-quality education for all</li>
+                            <li>Integrate advanced technology with industry-relevant curricula</li>
+                            <li>Foster lifelong learning and continuous skill development</li>
+                            <li>Build bridges between academic knowledge and practical application</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" alt="Team collaboration" class="profile-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ACHIEVEMENT -->
+            <section id="achievement" class="section-hidden">
+                <h2>Our Achievements</h2>
+                <p>Celebrating milestones and recognitions that drive us forward</p>
+                
+                <div class="achievement-grid">
+                    <div class="achievement-card">
+                        <i class="fas fa-users"></i>
+                        <h3>10,000+ Students</h3>
+                        <p>Successfully trained and certified professionals across various industries</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-award"></i>
+                        <h3>Industry Recognition</h3>
+                        <p>Awarded "Best EdTech Innovation" by Southeast Asia Technology Awards</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-globe-asia"></i>
+                        <h3>Regional Presence</h3>
+                        <p>Expanding across 5 countries with localized curriculum and support</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Industry Partners</h3>
+                        <p>Collaborating with 50+ leading companies for practical training programs</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MESSAGE US -->
+            <section id="message" class="section-hidden">
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                
+                <div class="form-container">
+                    <form id="message-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                                <input type="text" id="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                                <input type="email" id="email" required placeholder="your.email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                                <input type="text" id="phone" required placeholder="+62 xxx xxx xxxx">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthdate"><i class="fas fa-calendar"></i> Date of Birth</label>
+                                <input type="date" id="birthdate" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-venus-mars"></i> Gender</label>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" name="gender" value="Male" id="male" required>
+                                        <label for="male">Male</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" name="gender" value="Female" id="female">
+                                        <label for="female">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="message-text"><i class="fas fa-comment"></i> Message</label>
+                                <textarea id="message-text" required placeholder="Tell us about your inquiry or how we can help you..."></textarea>
+                            </div>
+                        </div>
+                        <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+
+                <div id="submitted-data">
+                    <h3><i class="fas fa-check-circle"></i> Message Submitted Successfully!</h3>
+                    <div class="data-grid">
+                        <div class="data-item">
+                            <strong>Submission Time:</strong><br>
+                            <span id="current-time"></span>
+                        </div>
+                        <div class="data-item">
+                            <strong>Name:</strong><br>
+                            <span id="submitted-name"></span>
+                        </div>
+                        <div class="data-item">
+                            <strong>Email:</strong><br>
+                            <span id="submitted-email"></span>
+                        </div>
+                        <div class="data-item">
+                            <strong>Phone:</strong><br>
+                            <span id="submitted-phone"></span>
+                        </div>
+                        <div class="data-item">
+                            <strong>Date of Birth:</strong><br>
+                            <span id="submitted-birthdate"></span>
+                        </div>
+                        <div class="data-item">
+                            <strong>Gender:</strong><br>
+                            <span id="submitted-gender"></span>
+                        </div>
+                        <div class="data-item" style="grid-column: 1 / -1;">
+                            <strong>Message:</strong><br>
+                            <span id="submitted-message"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><i class="fas fa-code"></i> Created by Haniff for RecoU Mini Bootcamp Project | <i class="fas fa-heart"></i> Made with passion</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
